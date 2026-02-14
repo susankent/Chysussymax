@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChySussy Max</title>
+<style>
+body{
+  background:black;
+  color:white;
+  font-family:sans-serif;
+  text-align:center;
+  margin-top:80px;
+}
+input{
+  padding:10px;
+  margin:5px;
+  width:220px;
+}
+button{
+  padding:12px 25px;
+  background:red;
+  color:white;
+  border:none;
+  cursor:pointer;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>ChySussy Max 🔥</h1>
+
+<h2>Sign Up</h2>
+<input id="newUser" placeholder="Enter your name"><br>
+<input id="newPass" type="password" placeholder="Password"><br>
+<button onclick="signup()">Sign Up</button>
+
+<h2>Login</h2>
+<input id="user" placeholder="Name"><br>
+<input id="pass" type="password" placeholder="Password"><br>
+<button onclick="login()">Login</button>
+
+<script>
+function signup(){
+  localStorage.setItem("user", document.getElementById("newUser").value);
+  localStorage.setItem("pass", document.getElementById("newPass").value);
+  alert("Sign up successful!");
+}
+
+function login(){
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+
+  if(u === localStorage.getItem("user") && p === localStorage.getItem("pass")){
+    localStorage.setItem("currentUser", u);
+    window.location = "home.html";
+  } else {
+    alert("Wrong login");
+  }
+}
+</script>
+
+</body>
+</html>
