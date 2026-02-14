@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body style="background:black;color:white;text-align:center;margin-top:100px;">
+
+<h1 id="welcome"></h1>
+
+<button onclick="openExclusive()">Unlock Exclusive 🔓</button>
+
+<br><br>
+
+<a href="about.html">About</a> | 
+<a href="faq.html">FAQ</a>
+
+<script>
+document.getElementById("welcome").innerText =
+"Welcome " + localStorage.getItem("currentUser") + " 🔥";
+
+function openExclusive(){
+  window.location = "exclusive.html";
+}
+</script>
+
+</body>
+</html>
