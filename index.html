@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VIP Login</title>
-  <style>
-    body {
-      background: black;
-      color: white;
-      text-align: center;
-      font-family: Arial;
-      margin-top: 100px;
-    }
-    input, button {
-      padding: 10px;
-      margin: 8px;
-      border-radius: 5px;
-      border: none;
-    }
-    button {
-      background: red;
-      color: white;
-      cursor: pointer;
-    }
-  </style>
+<title>ChySussy Max</title>
+<style>
+body{
+  background:black;
+  color:white;
+  font-family:sans-serif;
+  text-align:center;
+  margin-top:80px;
+}
+input{
+  padding:10px;
+  margin:5px;
+  width:220px;
+}
+button{
+  padding:12px 25px;
+  background:red;
+  color:white;
+  border:none;
+  cursor:pointer;
+  margin-top:10px;
+}
+</style>
 </head>
 
 <body>
 
-<h1>VIP Members Login 🔥</h1>
+<h1>ChySussy Max 🔥</h1>
 
-<form onsubmit="return loginUser()">
-  <input type="text" id="username" placeholder="Username" required><br>
-  <input type="password" id="password" placeholder="Password" required><br>
-  <button type="submit">Login</button>
-</form>
+<h2>Sign Up</h2>
+<input id="newUser" placeholder="Enter your name"><br>
+<input id="newPass" type="password" placeholder="Password"><br>
+<button onclick="signup()">Sign Up</button>
+
+<h2>Login</h2>
+<input id="user" placeholder="Name"><br>
+<input id="pass" type="password" placeholder="Password"><br>
+<button onclick="login()">Login</button>
 
 <script>
-function loginUser() {
-  var user = document.getElementById("username").value;
-  var pass = document.getElementById("password").value;
+function signup(){
+  localStorage.setItem("user", document.getElementById("newUser").value);
+  localStorage.setItem("pass", document.getElementById("newPass").value);
+  alert("Sign up successful!");
+}
 
-  if(user === "vip" && pass === "1234") {
-    window.location.href = "video.html";
+function login(){
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+
+  if(u === localStorage.getItem("user") && p === localStorage.getItem("pass")){
+    localStorage.setItem("currentUser", u);
+    window.location = "home.html";
   } else {
-    alert("Wrong username or password");
+    alert("Wrong login");
   }
-
-  return false;
 }
 </script>
 
