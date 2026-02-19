@@ -1,93 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>ChySussy Max 🔥</title>
+<body style="background:black;color:white;text-align:center;margin-top:100px;">
 
-<style>
-body {
-  background: linear-gradient(180deg, #000000, #0a0a0a);
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
+<h1 id="welcome"></h1>
+
+<button onclick="openExclusive()">Unlock Exclusive 🔓</button>
+
+<br><br>
+
+<a href="about.html">About</a> | 
+<a href="faq.html">FAQ</a>
+
+<script>
+document.getElementById("welcome").innerText =
+"Welcome " + localStorage.getItem("currentUser") + " 🔥";
+
+function openExclusive(){
+  window.location = "exclusive.html";
 }
-
-/* Center card */
-.container {
-  background: #111;
-  padding: 30px;
-  margin: 40px auto;
-  width: 90%;
-  max-width: 400px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px red;
-}
-
-/* Title glow */
-h1 {
-  color: white;
-  text-shadow: 0 0 10px red, 0 0 20px red;
-}
-
-/* Inputs */
-input {
-  width: 90%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border: none;
-  background: #222;
-  color: white;
-  font-size: 16px;
-}
-
-/* Buttons */
-button {
-  background: red;
-  color: white;
-  border: none;
-  padding: 14px 30px;
-  margin-top: 10px;
-  font-size: 18px;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 0 15px red;
-}
-
-button:hover {
-  background: #ff2a2a;
-}
-
-/* Section titles */
-.section-title {
-  margin-top: 30px;
-  font-size: 28px;
-  color: gold;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>ChySussy Max 🔥</h1>
-
-<div class="section-title">Sign Up</div>
-
-<input type="text" placeholder="Enter your name">
-<input type="password" placeholder="Password">
-
-<button>Sign Up</button>
-
-<div class="section-title">Login</div>
-
-<input type="text" placeholder="Name">
-<input type="password" placeholder="Password">
-
-<button>Login</button>
-
-</div>
+</script>
 
 </body>
 </html>
